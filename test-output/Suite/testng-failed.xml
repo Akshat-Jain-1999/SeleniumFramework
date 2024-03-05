@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="SeleniumEndtoEnd.TestComponents.Listeners"/>
+  </listeners>
+  <test name="Error Validations Test(failed)">
+    <classes>
+      <class name="SeleniumEndtoEnd.Tests.ErrorValidationsTest">
+        <methods>
+          <include name="ProductErrorValidation"/>
+          <include name="tearDown"/>
+          <include name="launchApplication"/>
+        </methods>
+      </class> <!-- SeleniumEndtoEnd.Tests.ErrorValidationsTest -->
+    </classes>
+  </test> <!-- Error Validations Test(failed) -->
+  <test name="Submit Order Test(failed)">
+    <classes>
+      <class name="SeleniumEndtoEnd.Tests.PageObjectSolutionCode">
+        <methods>
+          <include name="OrderItem" invocation-numbers="0 1"/>
+          <include name="OrderHistoryTest"/>
+          <include name="tearDown"/>
+          <include name="launchApplication"/>
+        </methods>
+      </class> <!-- SeleniumEndtoEnd.Tests.PageObjectSolutionCode -->
+    </classes>
+  </test> <!-- Submit Order Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

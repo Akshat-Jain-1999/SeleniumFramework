@@ -1,0 +1,184 @@
+# Created at 2024-01-23T12:24:40.924
+Exiting self fork JVM. Received SHUTDOWN command from Maven shutdown hook.
+Thread dump before exiting the process (17628@C-PF35EZEQ):
+"main" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@11.0.18/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@11.0.18/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:234)
+        at java.base@11.0.18/java.util.concurrent.FutureTask.awaitDone(FutureTask.java:444)
+        at java.base@11.0.18/java.util.concurrent.FutureTask.get(FutureTask.java:203)
+        at java.base@11.0.18/java.util.concurrent.AbstractExecutorService.invokeAll(AbstractExecutorService.java:284)
+        at app//org.testng.internal.thread.ThreadUtil.execute(ThreadUtil.java:64)
+        at app//org.testng.SuiteRunner.runInParallelTestMode(SuiteRunner.java:464)
+        at app//org.testng.SuiteRunner.privateRun(SuiteRunner.java:395)
+        at app//org.testng.SuiteRunner.run(SuiteRunner.java:336)
+        at app//org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+        at app//org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+        at app//org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+        at app//org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+        at app//org.testng.TestNG.runSuites(TestNG.java:1114)
+        at app//org.testng.TestNG.run(TestNG.java:1082)
+        at app//org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+        at app//org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+        at app//org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+        at app//org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+        at app//org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+        at app//org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+        at app//org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+
+"Reference Handler" 
+   java.lang.Thread.State: RUNNABLE
+        at java.base@11.0.18/java.lang.ref.Reference.waitForReferencePendingList(Native Method)
+        at java.base@11.0.18/java.lang.ref.Reference.processPendingReferences(Reference.java:241)
+        at java.base@11.0.18/java.lang.ref.Reference$ReferenceHandler.run(Reference.java:213)
+
+"Finalizer" 
+   java.lang.Thread.State: WAITING
+        at java.base@11.0.18/java.lang.Object.wait(Native Method)
+        at java.base@11.0.18/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155)
+        at java.base@11.0.18/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:176)
+        at java.base@11.0.18/java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:170)
+
+"Signal Dispatcher" 
+   java.lang.Thread.State: RUNNABLE
+
+"Attach Listener" 
+   java.lang.Thread.State: RUNNABLE
+
+"Common-Cleaner" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@11.0.18/java.lang.Object.wait(Native Method)
+        at java.base@11.0.18/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155)
+        at java.base@11.0.18/jdk.internal.ref.CleanerImpl.run(CleanerImpl.java:148)
+        at java.base@11.0.18/java.lang.Thread.run(Thread.java:834)
+        at java.base@11.0.18/jdk.internal.misc.InnocuousThread.run(InnocuousThread.java:134)
+
+"surefire-forkedjvm-stream-flusher" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@11.0.18/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@11.0.18/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:234)
+        at java.base@11.0.18/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2123)
+        at java.base@11.0.18/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+        at java.base@11.0.18/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+        at java.base@11.0.18/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1054)
+        at java.base@11.0.18/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1114)
+        at java.base@11.0.18/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+        at java.base@11.0.18/java.lang.Thread.run(Thread.java:834)
+
+"surefire-forkedjvm-command-thread" 
+   java.lang.Thread.State: RUNNABLE
+        at java.management@11.0.18/sun.management.ThreadImpl.getThreadInfo1(Native Method)
+        at java.management@11.0.18/sun.management.ThreadImpl.getThreadInfo(ThreadImpl.java:197)
+        at app//org.apache.maven.surefire.booter.ForkedBooter.generateThreadDump(ForkedBooter.java:579)
+        at app//org.apache.maven.surefire.booter.ForkedBooter.access$600(ForkedBooter.java:79)
+        at app//org.apache.maven.surefire.booter.ForkedBooter$4.update(ForkedBooter.java:315)
+        at app//org.apache.maven.surefire.booter.CommandReader$CommandRunnable.callListeners(CommandReader.java:357)
+        at app//org.apache.maven.surefire.booter.CommandReader$CommandRunnable.exitByConfiguration(CommandReader.java:367)
+        at app//org.apache.maven.surefire.booter.CommandReader$CommandRunnable.run(CommandReader.java:330)
+        at java.base@11.0.18/java.lang.Thread.run(Thread.java:834)
+
+"ForkJoinPool.commonPool-worker-3" 
+   java.lang.Thread.State: WAITING
+        at java.base@11.0.18/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@11.0.18/java.util.concurrent.locks.LockSupport.park(LockSupport.java:194)
+        at java.base@11.0.18/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1628)
+        at java.base@11.0.18/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:183)
+
+"Forwarding newSession on session null to remote" 
+   java.lang.Thread.State: BLOCKED
+        at java.base@11.0.18/java.lang.ProcessImpl.create(Native Method)
+        at java.base@11.0.18/java.lang.ProcessImpl.<init>(ProcessImpl.java:492)
+        at java.base@11.0.18/java.lang.ProcessImpl.start(ProcessImpl.java:153)
+        at java.base@11.0.18/java.lang.ProcessBuilder.start(ProcessBuilder.java:1107)
+        at java.base@11.0.18/java.lang.ProcessBuilder.start(ProcessBuilder.java:1071)
+        at app//org.openqa.selenium.os.ExternalProcess$Builder.start(ExternalProcess.java:191)
+        at app//org.openqa.selenium.remote.service.DriverService.start(DriverService.java:208)
+        at app//org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:119)
+        at app//org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
+        at app//org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:237)
+        at app//org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:164)
+        at app//org.openqa.selenium.chromium.ChromiumDriver.<init>(ChromiumDriver.java:114)
+        at app//org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:89)
+        at app//org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:84)
+        at app//org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:73)
+        at app//SeleniumEndtoEnd.TestComponents.BaseTest.initializeDriver(BaseTest.java:48)
+        at app//SeleniumEndtoEnd.TestComponents.BaseTest.launchApplication(BaseTest.java:93)
+        at java.base@11.0.18/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+        at java.base@11.0.18/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+        at java.base@11.0.18/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+        at java.base@11.0.18/java.lang.reflect.Method.invoke(Method.java:566)
+        at app//org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+        at app//org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+        at app//org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+        at app//org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+        at app//org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:663)
+        at app//org.testng.TestRunner.beforeRun(TestRunner.java:652)
+        at app//org.testng.TestRunner.run(TestRunner.java:614)
+        at app//org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+        at app//org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+        at app//org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+        at app//org.testng.internal.thread.ThreadUtil$$Lambda$188/0x000000080022e040.call(Unknown Source)
+        at java.base@11.0.18/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+        at java.base@11.0.18/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+        at java.base@11.0.18/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+        at java.base@11.0.18/java.lang.Thread.run(Thread.java:834)
+
+"Forwarding newSession on session null to remote" 
+   java.lang.Thread.State: RUNNABLE
+        at java.base@11.0.18/java.lang.ProcessImpl.create(Native Method)
+        at java.base@11.0.18/java.lang.ProcessImpl.<init>(ProcessImpl.java:492)
+        at java.base@11.0.18/java.lang.ProcessImpl.start(ProcessImpl.java:153)
+        at java.base@11.0.18/java.lang.ProcessBuilder.start(ProcessBuilder.java:1107)
+        at java.base@11.0.18/java.lang.ProcessBuilder.start(ProcessBuilder.java:1071)
+        at app//org.openqa.selenium.os.ExternalProcess$Builder.start(ExternalProcess.java:191)
+        at app//org.openqa.selenium.remote.service.DriverService.start(DriverService.java:208)
+        at app//org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:119)
+        at app//org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
+        at app//org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:237)
+        at app//org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:164)
+        at app//org.openqa.selenium.chromium.ChromiumDriver.<init>(ChromiumDriver.java:114)
+        at app//org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:89)
+        at app//org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:84)
+        at app//org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:73)
+        at app//SeleniumEndtoEnd.TestComponents.BaseTest.initializeDriver(BaseTest.java:48)
+        at app//SeleniumEndtoEnd.TestComponents.BaseTest.launchApplication(BaseTest.java:93)
+        at java.base@11.0.18/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+        at java.base@11.0.18/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+        at java.base@11.0.18/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+        at java.base@11.0.18/java.lang.reflect.Method.invoke(Method.java:566)
+        at app//org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+        at app//org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+        at app//org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+        at app//org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+        at app//org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:663)
+        at app//org.testng.TestRunner.beforeRun(TestRunner.java:652)
+        at app//org.testng.TestRunner.run(TestRunner.java:614)
+        at app//org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+        at app//org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+        at app//org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+        at app//org.testng.internal.thread.ThreadUtil$$Lambda$188/0x000000080022e040.call(Unknown Source)
+        at java.base@11.0.18/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+        at java.base@11.0.18/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+        at java.base@11.0.18/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+        at java.base@11.0.18/java.lang.Thread.run(Thread.java:834)
+
+"HttpClient-1-SelectorManager" 
+   java.lang.Thread.State: RUNNABLE
+        at java.base@11.0.18/sun.nio.ch.WindowsSelectorImpl$SubSelector.poll0(Native Method)
+        at java.base@11.0.18/sun.nio.ch.WindowsSelectorImpl$SubSelector.poll(WindowsSelectorImpl.java:357)
+        at java.base@11.0.18/sun.nio.ch.WindowsSelectorImpl.doSelect(WindowsSelectorImpl.java:182)
+        at java.base@11.0.18/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:124)
+        at java.base@11.0.18/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:136)
+        at platform/java.net.http@11.0.18/jdk.internal.net.http.HttpClientImpl$SelectorManager.run(HttpClientImpl.java:867)
+
+"HttpClient-2-SelectorManager" 
+   java.lang.Thread.State: RUNNABLE
+        at java.base@11.0.18/sun.nio.ch.WindowsSelectorImpl$SubSelector.poll0(Native Method)
+        at java.base@11.0.18/sun.nio.ch.WindowsSelectorImpl$SubSelector.poll(WindowsSelectorImpl.java:357)
+        at java.base@11.0.18/sun.nio.ch.WindowsSelectorImpl.doSelect(WindowsSelectorImpl.java:182)
+        at java.base@11.0.18/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:124)
+        at java.base@11.0.18/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:136)
+        at platform/java.net.http@11.0.18/jdk.internal.net.http.HttpClientImpl$SelectorManager.run(HttpClientImpl.java:867)
+
+
+

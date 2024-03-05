@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+
+<suite parallel="tests" name="Suite">
+
+	<listeners>
+		<listener class-name="SeleniumEndtoEnd.TestComponents.Listeners"></listener>
+	</listeners>
+
+	<test name="Error Validations Test">
+		<classes>
+			<class name="SeleniumEndtoEnd.Tests.ErrorValidationsTest" />
+		</classes>
+	</test> <!--
+	Test -->
+
+	<test name="Submit Order Test">
+		<classes>
+			<class name="SeleniumEndtoEnd.Tests.PageObjectSolutionCode" />
+		</classes>
+	</test>
+
+</suite> <!--
+Suite -->

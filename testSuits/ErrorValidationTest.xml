@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <groups>
+	  <run>
+		  <include name="ErrorHandlingTests"></include>
+	  </run>
+  </groups>
+  <test name="Error Validations Test">
+    <classes>
+      <class name="SeleniumEndtoEnd.Tests.ErrorValidationsTest"/>
+    </classes>
+  </test> <!-- Test -->
+  
+  <test name="Submit Order Test">
+    <classes>
+      <class name="SeleniumEndtoEnd.Tests.PageObjectSolutionCode"/>
+    </classes>
+  </test> <!-- Test -->
+  
+</suite> <!-- Suite -->
