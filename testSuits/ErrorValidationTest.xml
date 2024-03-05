@@ -11,6 +11,8 @@
       <class name="SeleniumEndtoEnd.Tests.ErrorValidationsTest"/>
     </classes>
   </test> <!-- Test -->
+
+  <!-- //new comments are added -->
   
   <test name="Submit Order Test">
     <classes>
